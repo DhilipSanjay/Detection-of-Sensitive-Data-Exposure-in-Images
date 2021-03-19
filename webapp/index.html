@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div style="text-align: center;">
+		<h2>Detection of Sensitive data in Images</h2>
+		<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+		<p><button><label for="file" style="cursor: pointer;">Upload Image</label></button></button></p>
+		<p><img id="output" src= "upload.gif" width="500" height="auto" /></p>
+		<p>Non-Sensitive</p>
+		<p>Sensitive</p>
+	</div>
+	<script>
+	var loadFile = function(event) {
+		var image = document.getElementById('output');
+		image.src = URL.createObjectURL(event.target.files[0]);
+	};
+	</script>
+</body>
+</html>
