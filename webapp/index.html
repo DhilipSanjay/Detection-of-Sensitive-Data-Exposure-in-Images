@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,22 +10,59 @@
 <body>
 	<div style="text-align: center;">
 		<h2>Detection of Sensitive data in Images</h2>
-		<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+		<p><input type="file" accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
 		<p><button><label for="file" style="cursor: pointer;">Upload Image</label></button></button></p>
 		<p><img id="output" src= "upload.gif" width="500" height="auto" /></p>
+		<p><button id="predict" type="submit" onclick="predict()">Predict</button></p>
 		<p>Non-Sensitive</p>
 		<p>Sensitive</p>
 	</div>
 	<script>
-	var loadFile = function(event) {
+	let image_model;
+	let text_model;
+	var loadFile = async function(event) {
 		var image = document.getElementById('output');
-		image.src = URL.createObjectURL(event.target.files[0]);
+		const photo = event.target.files[0];
+		const photoURL = URL.createObjectURL(photo);
+		image.src = photoURL;
 	};
 
-	const setupPage = async() => {
-		text_model = await tf.loadLayersModel('./model/text_model/model.json');
-		image_model = await tf.loadLayersModel('./model/image_model/model.json')
+	const predict = async () => {
+		var image = document.getElementById('output');
+		imagePrediction = predictImage(image);
+		imagePrediction.then((value) =>
+			{ console.log(value); }
+		);
+		// textPredicition = predictText("I'm Dhilip and my phone number is 12334132543");
 	}
+
+	const predictImage = async function(image){
+		let tensor = tf.browser.fromPixels(image)
+					.resizeBilinear([150, 150])
+					.div(tf.scalar(255))
+					.expandDims(0);
+		
+		const prediction = await image_model
+							.predict(tensor)
+							.data()
+							.then((value) => 
+								{ return value; }
+							);
+		return prediction;
+	}
+
+	const predictText = async function(text){
+		text_model.predict(text).data().then(
+			predictions => {console.log(predictions);}
+		);
+	}
+
+	const setupPage = async() => {
+		text_model = await tf.loadLayersModel('./models/text_model/model.json');
+		image_model = await tf.loadLayersModel('./models/image_model/model.json')
+	}
+
+	setupPage();
 	</script>
 </body>
 </html>
