@@ -19,3 +19,4 @@ jobs:
           projectId: sensitivity-detecto
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
+          FOLDER: webapp
