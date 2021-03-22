@@ -40,7 +40,7 @@ body{
   margin-left: 20px;
 }
 .main-container{
-  max-width: 750px;
+  max-width: 550px;
   height: auto;
   display: flex;
   flex-direction: column;
