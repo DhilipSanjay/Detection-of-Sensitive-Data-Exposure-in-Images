@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Detection of Sensitive data in Images">
     <title>Sensitivity Detecto</title>
-    <link rel="icon" href="./assets/favicon.png">
+    <link rel="icon" href="./assets/images/favicon.png">
     <link rel="stylesheet" href="./assets/style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -25,8 +25,8 @@
        
     <div class="navbar-links">
       <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Team</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#team">Team</a></li>
         <li class="darkmode-button">
           <input type="checkbox" class="checkbox" id="chk"/>
           <label class="label" for="chk">
@@ -42,6 +42,8 @@
   <div class="section">
   <div class="main-title">Detection of sensitive data exposure in images</div>
   <div class="main-container">
+  
+
     <button>Browse File</button>
     <div class="drag-area">
       <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
@@ -58,27 +60,84 @@
   </div>
   </div>
 
-  <!-- <div class="section secondary">
-    <span>
-      <div class="title">
+  <div id="about" class="section secondary">
+    <div>
+      <div class="big-text">
+        Is your data safe in the cloud?
+      </div>
+
+      <p>
+        In the current age of smart devices and smart phones, any image taken using these devices are immediately auto uploaded to the cloud (Google Photos, iCloud, etc) or internet (Social media sites like Facebook, Twitter, etc). And there is an archive of all the contents that is being uploaded to the internet in the Wayback Machine. So, one must be cautious about what is being uploaded to the internet.
+      </p>
+        
+      <p>
+        Loss, misuse, modification, or unauthorized access to sensitive information can adversely affect the privacy or welfare of an individual, trade secrets of a business or even the security and international relations of a nation depending on the level of sensitivity and nature of the information.
+      </p>
+    </div>
+    
+    <div>
+      <div class="main-title">
         About the project
       </div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ullam, ut voluptas delectus deleniti ratione blanditiis eaque minima architecto? Placeat enim saepe quae, accusamus explicabo sequi nostrum dignissimos impedit voluptates!
-    </span>
-    <span>
-      <img src="./assets/about.jpg" alt="About image">
-    </span>
+      
+      <p>
+         We have designed a machine learning system that classifies the data in the images as <b>sensitive or non-sensitive</b>. On being classified as sensitive, we can warn the users that their image contains sensitive information (before uploading to the cloud).
+      </p>
+      <a href="https://github.com/DhilipSanjay/Detection-of-Sensitive-Data-Exposure-in-Images" target="_blank">
+      <button>
+        View Source Code on Github
+      </button>
+    </a>
+    </div>   
+  </div>
+
+  <div id="team" class="section">
+      <div class="big-text underline">
+        Meet our team
+      </div>
+      <div class="team-members">
+      <div class="member">
+        <img src="https://dhilipsanjay.github.io/assets/img/current_dp.jpeg" alt="Not Found" onerror="this.src='./assets/images/placeholder.jpg'">
+        <a href="https://twitter.com/DhilipSanjay" target="_blank">
+          <p>Dhilip Sanjay</p>
+        </a>        
+      </div>
+
+      <div class="member">
+        <img src="./assets/images/placeholder.jpg" alt="Not Found" onerror="this.src='./assets/images/placeholder.jpg'">
+        <a href="#" target="_blank">
+          <p>Amir Faizal</p>
+        </a>  
+      </div>
+
+      <div class="member">
+        <img src="./assets/images/placeholder.jpg" lt="Not Found" onerror="this.src='./assets/images/placeholder.jpg'">
+        <a href="#" target="_blank">
+          <p>Naveen</p>
+        </a>  
+      </div>
+
+      <div class="member">
+        <img src="./assets/images/placeholder.jpg" lt="Not Found" onerror="this.src='./assets/images/placeholder.jpg'">
+        <a href="https://twitter.com/DhilipSanjay" target="_blank">
+          <p>Mouleeshwaran</p>
+        </a>  
+      </div>
+
+      <div class="member">
+        <img src="./assets/images/placeholder.jpg" lt="Not Found" onerror="this.src='./assets/images/placeholder.jpg'">
+        <a href="https://twitter.com/DhilipSanjay" target="_blank">
+          <p>Vishnu Vardhan</p>
+        </a>  
+      </div>
+    </div>
   </div>
 
   <div class="footer">
-    <span>
-      Powered by Firebase Hosting
-    </span> -->
-
+    <p class="footer-text">Powered by Firebase Hosting</p>
+    <p class="footer-text">© Sensitivity Detecto - 2021 - Present</p>
   </div>
 
-<div class="firefly"></div>
-<div class="firefly"></div>
 <div class="firefly"></div>
 <div class="firefly"></div>
 <div class="firefly"></div>
