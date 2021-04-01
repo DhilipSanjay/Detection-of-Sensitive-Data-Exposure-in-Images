@@ -9,26 +9,38 @@
     <link rel="stylesheet" href="./assets/style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel=”stylesheet” href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- TensorFlow JS and Tesseract -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
     <script src="https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js"></script>
   </head>
 <body>
-  <nav class="nav-bar">
-    <img id="logo" src="./assets/favicon.png" />
-    <h1 class="a">Detection of Sensitive data in Images</h1>
-    <div>
-      <input type="checkbox" class="checkbox" id="chk"/>
-      <label class="label" for="chk">
-        <i class="fas fa-sun"></i>	    
-        <i class="fas fa-moon"></i>
-        <div class="ball"></div>
-      </label>
+  <nav  class="navbar">
+    <div class="title"><a href="">Sensitivity Detecto</a></div>
+    <div class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </div>
+       
+    <div class="navbar-links">
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Team</a></li>
+        <li class="darkmode-button">
+          <input type="checkbox" class="checkbox" id="chk"/>
+          <label class="label" for="chk">
+            <i class="fas fa-sun"></i>	    
+            <i class="fas fa-moon"></i>
+            <div class="ball"></div>
+          </label>
+        </li>
+    </ul>
+  </div>
   </nav>
   
+  <div class="section">
+  <div class="main-title">Detection of sensitive data exposure in images</div>
   <div class="main-container">
     <button>Browse File</button>
     <div class="drag-area">
@@ -43,6 +55,26 @@
     </div> 
     <div class="prediction non-sensitive"><i class="fas fa-check-square"></i> Non-Sensitive</div>
     <div class="prediction sensitive"><i class="fas fa-times-circle"></i> Sensitive</div>
+  </div>
+  </div>
+
+  <!-- <div class="section secondary">
+    <span>
+      <div class="title">
+        About the project
+      </div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ullam, ut voluptas delectus deleniti ratione blanditiis eaque minima architecto? Placeat enim saepe quae, accusamus explicabo sequi nostrum dignissimos impedit voluptates!
+    </span>
+    <span>
+      <img src="./assets/about.jpg" alt="About image">
+    </span>
+  </div>
+
+  <div class="footer">
+    <span>
+      Powered by Firebase Hosting
+    </span> -->
+
   </div>
 
 <div class="firefly"></div>

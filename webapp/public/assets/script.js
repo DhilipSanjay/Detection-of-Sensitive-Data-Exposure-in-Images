@@ -9,6 +9,13 @@ nonsensitive = document.querySelector(".non-sensitive"),
 progressStatus = document.querySelector("#progressStatus"),
 progressBar = document.querySelector("#progressBar");
 
+toggle = document.querySelector(".toggle-button");
+navlinks = document.querySelector(".navbar-links");
+
+toggle.addEventListener('click', () => {
+  navlinks.classList.toggle('active');
+});
+
 button.onclick = ()=>{
   input.click();
 }
