@@ -12,6 +12,7 @@ progressBar = document.querySelector("#progressBar");
 toggle = document.querySelector(".toggle-button");
 navlinks = document.querySelector(".navbar-links");
 
+// Navbar toggle button
 toggle.addEventListener('click', () => {
   navlinks.classList.toggle('active');
 });
@@ -56,6 +57,7 @@ var loadFile = function(event) {
   }
 };
 
+// Dark Mode toggle
 const chk = document.getElementById('chk');
 chk.addEventListener('change', () => {
   document.body.classList.toggle('dark');
