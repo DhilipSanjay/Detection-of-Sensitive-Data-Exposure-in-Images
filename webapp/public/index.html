@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Detection of Sensitive data in Images">
+    <meta name="description" content="Detection of Sensitive Data exposure in Images">
     <title>Sensitivity Detecto</title>
     <link rel="icon" href="./assets/images/favicon.png">
     <link rel="stylesheet" href="./assets/style.css">
@@ -40,10 +40,32 @@
   </nav>
   
   <div class="section">
-  <div class="main-title">Detection of sensitive data exposure in images</div>
-  <div class="main-container">
-  
+  <div class="big-text">Detection of sensitive data exposure in images</div>
+  <div class="steps">
+    <div class="single-step">
+      <img src="./assets/images//click.png" alt="Upload">
+      <div class="single-step-content">
+        <p class="main-title">Click</p>
+        <p>Take or choose a picture from your device</p>
+      </div>
+    </div>
+    <div class="single-step">
+      <img src="./assets/images/upload.png" alt="Upload">
+      <div class="single-step-content">
+      <p class="main-title">Upload</p>
+      <p>Upload the picture to SENSITIVITY DETECTO before uploading to cloud</p>
+      </div>
+    </div>
+    <div class="single-step">
+      <img src="./assets/images/detect.png" alt="Upload">
+      <div class="single-step-content">
+        <p class="main-title">Detect</p>
+        <p>Detect if your image contains sensitive information</p>
+      </div>
+    </div>
+  </div>
 
+  <div class="main-container">
     <button>Browse File</button>
     <div class="drag-area">
       <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
@@ -55,8 +77,8 @@
     <div id="progressStatus"> 
       <div id="progressBar">1%</div> 
     </div> 
-    <div class="prediction non-sensitive"><i class="fas fa-check-square"></i> Non-Sensitive</div>
-    <div class="prediction sensitive"><i class="fas fa-times-circle"></i> Sensitive</div>
+    <div class="prediction non-sensitive main-title"><i class="fas fa-check-square"></i> Non-Sensitive</div>
+    <div class="prediction sensitive main-title"><i class="fas fa-times-circle"></i> Sensitive</div>
   </div>
   </div>
 
@@ -96,37 +118,39 @@
         Meet our team
       </div>
       <div class="team-members">
-      <div class="member">
-        <img src="https://dhilipsanjay.github.io/assets/img/current_dp.jpeg" alt="Not Found" onerror="this.src='./assets/images/placeholder.jpg'">
-        <a href="https://twitter.com/DhilipSanjay" target="_blank">
-          <p>Dhilip Sanjay</p>
-        </a>        
-      </div>
+        
+        <div class="member">
+          <img src="https://dhilipsanjay.github.io/assets/img/current_dp.jpeg" alt="Not Found" onerror="this.src='./assets/images/placeholder.jpg'">
+          <a href="https://twitter.com/DhilipSanjay" target="_blank">
+            <p>Dhilip Sanjay</p>
+          </a>        
+        </div>
 
-      <div class="member">
-        <img src="./assets/images/placeholder.jpg" alt="Not Found" onerror="this.src='./assets/images/placeholder.jpg'">
-        <a href="#" target="_blank">
-          <p>Amir Faizal</p>
-        </a>  
-      </div>
-
+        <div class="member">
+          <img src="./assets/images/placeholder.jpg" alt="Not Found" onerror="this.src='./assets/images/placeholder.jpg'">
+          <a href="" target="_blank">
+            <p>Amir Faizal</p>
+          </a>  
+        </div>
+        
+        <div class="member">
+          <img src="./assets/images/placeholder.jpg" lt="Not Found" onerror="this.src='./assets/images/placeholder.jpg'">
+          <a href="" target="_blank">
+            <p>Mouleeshwaran</p>
+          </a>  
+        </div>
+        
       <div class="member">
         <img src="./assets/images/placeholder.jpg" lt="Not Found" onerror="this.src='./assets/images/placeholder.jpg'">
-        <a href="#" target="_blank">
+        <a href="" target="_blank">
           <p>Naveen</p>
         </a>  
       </div>
 
-      <div class="member">
-        <img src="./assets/images/placeholder.jpg" lt="Not Found" onerror="this.src='./assets/images/placeholder.jpg'">
-        <a href="https://twitter.com/DhilipSanjay" target="_blank">
-          <p>Mouleeshwaran</p>
-        </a>  
-      </div>
 
       <div class="member">
         <img src="./assets/images/placeholder.jpg" lt="Not Found" onerror="this.src='./assets/images/placeholder.jpg'">
-        <a href="https://twitter.com/DhilipSanjay" target="_blank">
+        <a href="" target="_blank">
           <p>Vishnu Vardhan</p>
         </a>  
       </div>
@@ -134,8 +158,9 @@
   </div>
 
   <div class="footer">
-    <p class="footer-text">Powered by Firebase Hosting</p>
-    <p class="footer-text">© Sensitivity Detecto - 2021 - Present</p>
+    <p class="footer-text">Hosted using</p>
+    <img src="./assets/images/firebase.svg" alt="Firebase icon">
+    <p class="footer-text">© Sensitivity Detecto - 2021</p>
   </div>
 
 <div class="firefly"></div>
