@@ -132,7 +132,7 @@ a{
 
 .big-text{
   padding:10px;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 800;
   text-align: center;
 }
@@ -285,7 +285,7 @@ button:hover, button:focus, button:active,
 
 .single-step-content{
   align-self: flex-start;
-  padding: 5px 20px;
+  padding: 5px 10px 20px;
   font-size: 1.1rem;
   text-align: center;
 }
@@ -295,11 +295,24 @@ button:hover, button:focus, button:active,
   box-shadow: 0 0 7px rgba(0, 0, 0, .5);
 }
 
-.member img, .single-step img{
+.circular-portrait {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular-portrait img {
+  width: 100%;
+  height: auto;
+}
+
+.single-step img{
   max-width: 150px;
   border-radius: 50%;
   object-fit: cover;
-  padding-bottom: 10px;
+  padding: 10px;
 }
 .single-step img{
   border-radius: 0;
@@ -309,6 +322,7 @@ button:hover, button:focus, button:active,
 .member a{
   color: var(--foreground);
   font-size: 1.25rem;
+  padding: 15px 0 0;
   transition: all 0.3s ease-in-out;
 }
 
@@ -331,9 +345,11 @@ button:hover, button:focus, button:active,
   }
 
   .single-step{
+    padding-top: 0px;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
     justify-content: space-around;
+    align-items: center;
   }
 }
 
