@@ -276,7 +276,7 @@ button:hover, button:focus, button:active,
   background-color: var(--secondary-bg);
   display: grid;
   padding-top: 20px;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto;
   grid-gap: 10px;
   justify-items: center;
   width: 100%;
