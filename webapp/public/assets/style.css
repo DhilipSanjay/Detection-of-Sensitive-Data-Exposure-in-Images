@@ -430,7 +430,7 @@ button:hover, button:focus, button:active,
   font-size: 17px;
 }
 
-.prediction {
+.classification {
   display: none;
   border-width:5px;  
   border-style:outset;

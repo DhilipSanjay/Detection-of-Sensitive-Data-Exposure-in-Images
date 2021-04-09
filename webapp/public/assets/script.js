@@ -44,7 +44,7 @@ var loadFile = function(event) {
       progressStatus.style.display = "block";
       progressBar.style.display = "block";
       setTimeout(() => {
-        predict();
+        classify();
       }, 150);
     }
     else{
@@ -63,13 +63,13 @@ chk.addEventListener('change', () => {
   document.body.classList.toggle('dark');
 });
 
-const predict = async () => {
+const classify = async () => {
   var image = document.getElementById('output');
-  imagePrediction = predictImage(image);
+  imagePrediction = classifyImage(image);
   textPrediction = extractText(image)
                       .then((text) =>
                       {
-                          return predictText(text); 
+                          return classifyText(text); 
                       });
   let image_conf = 0;
   let text_conf = 0;
@@ -122,22 +122,22 @@ const extractText = async function(image){
   return text;
 }
 
-const predictImage = async function(image){
+const classifyImage = async function(image){
   let tensor = tf.browser.fromPixels(image)
               .resizeBilinear([150, 150])
               .div(tf.scalar(255))
               .expandDims(0);
   
-  const prediction = await image_model
+  const classification = await image_model
                       .predict(tensor)
                       .data()
                       .then((value) => 
                           { return value; }
                       );
-  return prediction;
+  return classification;
 }
 
-const predictText = async function(text){
+const classifyText = async function(text){
   const max_length = 60;
   const tokens = text.split(" ");
   const word_index = await fetch('./models/text_model/word_index.json')
@@ -153,13 +153,13 @@ const predictText = async function(text){
   }
   let tensor = tf.tensor([padded]);
   
-  const prediction = await text_model
+  const classification = await text_model
                           .predict(tensor)
                           .data()
                           .then( (value) => 
                           { return value; }
                           );
-  return prediction;
+  return classification;
 }
 
 
