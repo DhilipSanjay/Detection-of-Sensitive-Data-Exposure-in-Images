@@ -1,13 +1,13 @@
 # Detection-of-Sensitive-Data-Exposure-in-Images
-**Machine Learning model** that is deployed as a **Web Application** which can be used by any individual or company to detect if their images contains sensitive data, thereby protecting the exposure or loss of sensitive data.
+**Machine Learning Model** that is deployed as a **Web Application** which can be used by any individual or company to detect if their images contains sensitive data or not, thereby protecting the exposure or loss of private and sensitive information.
 
 ## Web Application - [Sensitivity Detecto](https://sensitivity-detecto.web.app)
 ![Classified as Sensitive](images/Sensitive.png)
 ![Classified as Non-sensitive](images/Non-sensitive.png)
 
 ## Abstract
-In the current age of smart devices and smart phones, any image taken using these devices are immediately auto uploaded to the cloud (Google Photos, iCloud, etc) or internet (Social media sites like Facebook, Twitter, etc). And there is an archive of all the contents that is being uploaded to the internet in the [Wayback Machine](https://web.archive.org/). So, one must be cautious about what is being uploaded to the internet.
-s
+In the current age of smart devices and smart phones, any image taken using these devices are immediately auto uploaded to the cloud (Google Photos, iCloud, etc) or internet (Social media sites like Facebook, Twitter, etc). And there is an archive of all the contents that is being uploaded to the internet in the [Wayback Machine](https://web.archive.org/). So, one must be cautious about what is being uploaded to the internet. 
+
 Unfortunately, people knowingly or unknowingly upload images containing **sensitive data** like:
 - Usernames and Passwords
 - Credit card or Payment Card Information (PCI)
